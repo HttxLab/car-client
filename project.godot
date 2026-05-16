@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Car Client"
 config/version="v0.0.1"
-run/main_scene="uid://do6o1xouj7f07"
+run/main_scene="uid://c1jpty2g1d8ef"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 boot_splash/use_filter=false
 boot_splash/image="uid://ciivryxpjv284"
@@ -29,3 +29,4 @@ project/assembly_name="CarClient"
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+environment/defaults/default_clear_color=Color(0.14901961, 0.15686275, 0.18039216, 1)
