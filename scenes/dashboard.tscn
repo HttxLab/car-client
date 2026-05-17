@@ -2,12 +2,14 @@
 
 [ext_resource type="Script" uid="uid://prry5txjx8uw" path="res://scripts/Main.cs" id="1_sss21"]
 [ext_resource type="Texture2D" uid="uid://b2bnbqin8ljvv" path="res://textures/testing/test.png" id="2_bi3rc"]
-[ext_resource type="Texture2D" uid="uid://b6js5uqoow3nv" path="res://textures/icons/electric_bolt.svg" id="2_meibj"]
+[ext_resource type="Texture2D" uid="uid://y2c2wp66shr1" path="res://textures/icons/electric_bolt.png" id="2_dq1y6"]
 [ext_resource type="LabelSettings" uid="uid://7ws5ynktrdy7" path="res://resources/telemetry/value.tres" id="3_bjcq8"]
 [ext_resource type="LabelSettings" uid="uid://bb6p4c5v5wv3r" path="res://resources/telemetry/name.tres" id="3_e5s8x"]
-[ext_resource type="Texture2D" uid="uid://0ttmj5f6ul7n" path="res://textures/icons/battery_share.svg" id="4_e5s8x"]
-[ext_resource type="Texture2D" uid="uid://bdmkgyq7boj3q" path="res://textures/icons/developer_board.svg" id="5_ikpk0"]
-[ext_resource type="Texture2D" uid="uid://d1t0twou8ssfr" path="res://textures/icons/memory.svg" id="6_dq1y6"]
+[ext_resource type="Texture2D" uid="uid://dorecf6pmn8xh" path="res://textures/icons/battery.png" id="5_s1kmj"]
+[ext_resource type="Texture2D" uid="uid://c531x7v23hg4" path="res://textures/icons/developer_board.png" id="6_2ivo1"]
+[ext_resource type="Texture2D" uid="uid://dq50qugkqxpq4" path="res://textures/icons/memory.png" id="7_ogty5"]
+[ext_resource type="Texture2D" uid="uid://cpsyimcm2wfwv" path="res://textures/icons/search_hands_free.png" id="8_dq1y6"]
+[ext_resource type="Texture2D" uid="uid://qmtua57p32an" path="res://textures/icons/speed.png" id="9_s1kmj"]
 
 [node name="Dashboard" type="Control" unique_id=947889649 node_paths=PackedStringArray("_forwards", "_backwards", "_left", "_right")]
 layout_mode = 3
@@ -50,9 +52,8 @@ layout_mode = 2
 
 [node name="Icon" type="TextureRect" parent="Vertical/Telemetry/Voltage/Container" unique_id=1806691498]
 layout_mode = 2
-texture = ExtResource("2_meibj")
+texture = ExtResource("2_dq1y6")
 expand_mode = 2
-stretch_mode = 2
 
 [node name="Name" type="Label" parent="Vertical/Telemetry/Voltage/Container" unique_id=1701703101]
 layout_mode = 2
@@ -76,9 +77,8 @@ layout_mode = 2
 
 [node name="Icon" type="TextureRect" parent="Vertical/Telemetry/Ampere/Container" unique_id=987503321]
 layout_mode = 2
-texture = ExtResource("4_e5s8x")
+texture = ExtResource("5_s1kmj")
 expand_mode = 2
-stretch_mode = 2
 
 [node name="Name" type="Label" parent="Vertical/Telemetry/Ampere/Container" unique_id=2040912295]
 layout_mode = 2
@@ -102,9 +102,8 @@ layout_mode = 2
 
 [node name="Icon" type="TextureRect" parent="Vertical/Telemetry/CPU Usage/Container" unique_id=2018104661]
 layout_mode = 2
-texture = ExtResource("5_ikpk0")
+texture = ExtResource("6_2ivo1")
 expand_mode = 2
-stretch_mode = 2
 
 [node name="Name" type="Label" parent="Vertical/Telemetry/CPU Usage/Container" unique_id=1524028500]
 layout_mode = 2
@@ -128,9 +127,8 @@ layout_mode = 2
 
 [node name="Icon" type="TextureRect" parent="Vertical/Telemetry/RAM Usage/Container" unique_id=1263225322]
 layout_mode = 2
-texture = ExtResource("6_dq1y6")
+texture = ExtResource("7_ogty5")
 expand_mode = 2
-stretch_mode = 2
 
 [node name="Name" type="Label" parent="Vertical/Telemetry/RAM Usage/Container" unique_id=1088272604]
 layout_mode = 2
@@ -149,18 +147,60 @@ size_flags_stretch_ratio = 6.0
 
 [node name="Telemetry" type="VBoxContainer" parent="Vertical/Middle" unique_id=1446655058]
 layout_mode = 2
-size_flags_horizontal = 3
+
+[node name="Inputs" type="HBoxContainer" parent="Vertical/Middle/Telemetry" unique_id=412500718]
+layout_mode = 2
+alignment = 1
+
+[node name="Steering" type="MarginContainer" parent="Vertical/Middle/Telemetry/Inputs" unique_id=1776694180]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="Vertical" type="VBoxContainer" parent="Vertical/Middle/Telemetry/Inputs/Steering" unique_id=236779350]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Vertical/Middle/Telemetry/Inputs/Steering/Vertical" unique_id=1060737062]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("8_dq1y6")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Vertical/Middle/Telemetry/Inputs/Steering/Vertical" unique_id=1241156752]
+layout_mode = 2
+text = "0.25"
+label_settings = ExtResource("3_bjcq8")
+horizontal_alignment = 1
+
+[node name="Accelerator" type="MarginContainer" parent="Vertical/Middle/Telemetry/Inputs" unique_id=1420340664]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="Vertical" type="VBoxContainer" parent="Vertical/Middle/Telemetry/Inputs/Accelerator" unique_id=671087516]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Vertical/Middle/Telemetry/Inputs/Accelerator/Vertical" unique_id=1702217000]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("9_s1kmj")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Vertical/Middle/Telemetry/Inputs/Accelerator/Vertical" unique_id=372997814]
+layout_mode = 2
+text = "0.34"
+label_settings = ExtResource("3_bjcq8")
+horizontal_alignment = 1
 
 [node name="Forwards Camera" type="TextureRect" parent="Vertical/Middle" unique_id=1047941154]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 2.0
 texture = ExtResource("2_bi3rc")
 expand_mode = 2
+stretch_mode = 6
 
 [node name="Software Settings" type="VBoxContainer" parent="Vertical/Middle" unique_id=500241695]
 layout_mode = 2
-size_flags_horizontal = 3
 
 [node name="Bottom" type="HBoxContainer" parent="Vertical" unique_id=1583861565]
 layout_mode = 2
@@ -172,6 +212,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("2_bi3rc")
 expand_mode = 2
+stretch_mode = 6
 
 [node name="Backwards Camera" type="TextureRect" parent="Vertical/Bottom" unique_id=645579185]
 layout_mode = 2
@@ -179,9 +220,11 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.2
 texture = ExtResource("2_bi3rc")
 expand_mode = 2
+stretch_mode = 6
 
 [node name="Right Camera" type="TextureRect" parent="Vertical/Bottom" unique_id=1663155008]
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("2_bi3rc")
 expand_mode = 2
+stretch_mode = 6

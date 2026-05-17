@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0ttmj5f6ul7n"
-path="res://.godot/imported/battery_share.svg-5eab2fe0acab536709d5adda202a9cb4.ctex"
+uid="uid://dq50qugkqxpq4"
+path="res://.godot/imported/memory.png-723b2989489734624fb567d9860aeff7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/icons/battery_share.svg"
-dest_files=["res://.godot/imported/battery_share.svg-5eab2fe0acab536709d5adda202a9cb4.ctex"]
+source_file="res://textures/icons/memory.png"
+dest_files=["res://.godot/imported/memory.png-723b2989489734624fb567d9860aeff7.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
