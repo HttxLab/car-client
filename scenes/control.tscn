@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://prry5txjx8uw" path="res://scripts/Main.cs" id="1_5p55f"]
 [ext_resource type="Theme" uid="uid://54dxe8xrafvk" path="res://resources/theme/global.tres" id="1_r67kn"]
 [ext_resource type="StyleBox" uid="uid://bhily0agsva63" path="res://resources/theme/buttons/control/normal.tres" id="3_1p5nq"]
-[ext_resource type="Texture2D" uid="uid://b2bnbqin8ljvv" path="res://textures/testing/test.png" id="3_brbbq"]
 [ext_resource type="Texture2D" uid="uid://ckvi8gngxlcj3" path="res://textures/icons/network_ping_100dp_34C690_FILL0_wght400_GRAD0_opsz48.png" id="3_tac8f"]
 [ext_resource type="StyleBox" uid="uid://cyx11d7mnt6dh" path="res://resources/theme/buttons/emergency/normal.tres" id="4_lt2xq"]
 [ext_resource type="StyleBox" uid="uid://c3u7ityhvvopl" path="res://resources/theme/bars/background.tres" id="4_tjwpk"]
@@ -22,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://b04dvo5qtadpm" path="res://textures/icons/search_hands_free_100dp_27D2ED_FILL0_wght400_GRAD0_opsz48.png" id="15_2pn8f"]
 [ext_resource type="StyleBox" uid="uid://657phsfq2nx0" path="res://resources/theme/buttons/emergency/hover.tres" id="15_tfhda"]
 [ext_resource type="StyleBox" uid="uid://d005t81fvu4xk" path="res://resources/theme/buttons/record/pressed.tres" id="15_usxgj"]
+[ext_resource type="Texture2D" uid="uid://bk3lxi0mdpvop" path="res://textures/testing/testing.png" id="16_6uaey"]
 [ext_resource type="Texture2D" uid="uid://4vihsmsghksy" path="res://textures/icons/rocket_launch_100dp_27D2ED_FILL0_wght400_GRAD0_opsz48.png" id="18_tfhda"]
 [ext_resource type="StyleBox" uid="uid://cioqmiwg8q7sb" path="res://resources/theme/buttons/emergency/pressed.tres" id="19_6uaey"]
 
@@ -361,7 +361,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_brbbq")
+texture = ExtResource("16_6uaey")
 expand_mode = 1
 stretch_mode = 6
 
@@ -387,10 +387,10 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 15.0
-offset_top = -90.0
-offset_right = 265.0
-offset_bottom = -11.0
+offset_left = 13.0
+offset_top = -92.0
+offset_right = 263.0
+offset_bottom = -13.0
 grow_vertical = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/SteeringHUD" unique_id=253372977]
@@ -475,20 +475,20 @@ theme_override_constants/separation = 16
 [node name="LeftCamera" type="TextureRect" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/BottomCameras" unique_id=2039706042]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("3_brbbq")
+texture = ExtResource("16_6uaey")
 expand_mode = 1
 stretch_mode = 6
 
 [node name="RearCamera" type="TextureRect" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/BottomCameras" unique_id=1033141846]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("3_brbbq")
+texture = ExtResource("16_6uaey")
 expand_mode = 1
 stretch_mode = 6
 
 [node name="RightCamera" type="TextureRect" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/BottomCameras" unique_id=507498383]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("3_brbbq")
+texture = ExtResource("16_6uaey")
 expand_mode = 1
 stretch_mode = 6
