@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qmtua57p32an"
-path="res://.godot/imported/speed.png-c4beeef99850532a046360bf1676d9bf.ctex"
+uid="uid://ckvi8gngxlcj3"
+path="res://.godot/imported/network_ping_100dp_34C690_FILL0_wght400_GRAD0_opsz48.png-772db0db60959c0b986dd59a684d58e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/icons/speed.png"
-dest_files=["res://.godot/imported/speed.png-c4beeef99850532a046360bf1676d9bf.ctex"]
+source_file="res://textures/icons/network_ping_100dp_34C690_FILL0_wght400_GRAD0_opsz48.png"
+dest_files=["res://.godot/imported/network_ping_100dp_34C690_FILL0_wght400_GRAD0_opsz48.png-772db0db60959c0b986dd59a684d58e0.ctex"]
 
 [params]
 

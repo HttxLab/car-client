@@ -1,0 +1,24 @@
+[gd_resource type="Theme" format=3 uid="uid://54dxe8xrafvk"]
+
+[ext_resource type="FontFile" uid="uid://fnctki4ea0oh" path="res://fonts/FiraCode-Regular.ttf" id="1_uxvbd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uxvbd"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.09019608, 0.11372549, 0.18039216, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.11764706, 0.16078432, 0.23137255, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[resource]
+default_font = ExtResource("1_uxvbd")
+default_font_size = 13
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_uxvbd")

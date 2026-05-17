@@ -1,0 +1,455 @@
+[gd_scene format=3 uid="uid://do6o1xouj7f07"]
+
+[ext_resource type="Script" uid="uid://prry5txjx8uw" path="res://scripts/Main.cs" id="1_5p55f"]
+[ext_resource type="Theme" uid="uid://54dxe8xrafvk" path="res://resources/theme/global.tres" id="1_r67kn"]
+[ext_resource type="StyleBox" uid="uid://bhily0agsva63" path="res://resources/theme/buttons/mode/normal.tres" id="3_1p5nq"]
+[ext_resource type="Texture2D" uid="uid://b2bnbqin8ljvv" path="res://textures/testing/test.png" id="3_brbbq"]
+[ext_resource type="Texture2D" uid="uid://ckvi8gngxlcj3" path="res://textures/icons/network_ping_100dp_34C690_FILL0_wght400_GRAD0_opsz48.png" id="3_tac8f"]
+[ext_resource type="StyleBox" uid="uid://cyx11d7mnt6dh" path="res://resources/theme/buttons/red/normal.tres" id="4_lt2xq"]
+[ext_resource type="StyleBox" uid="uid://c3u7ityhvvopl" path="res://resources/theme/bars/background.tres" id="4_tjwpk"]
+[ext_resource type="Texture2D" uid="uid://cgoi75u071e63" path="res://textures/icons/memory_alt_100dp_C4CAD3_FILL0_wght400_GRAD0_opsz48.png" id="4_vb5ih"]
+[ext_resource type="Texture2D" uid="uid://bqtldf70dnd50" path="res://textures/icons/electric_bolt_100dp_F9CB1C_FILL0_wght400_GRAD0_opsz48.png" id="5_6pn8l"]
+[ext_resource type="StyleBox" uid="uid://bii3ibiimuegy" path="res://resources/theme/bars/fill.tres" id="5_lpubu"]
+[ext_resource type="Texture2D" uid="uid://dmqrb4b1bilgs" path="res://textures/icons/antigravity_100dp_27D2ED_FILL0_wght400_GRAD0_opsz48.png" id="6_0jf8d"]
+[ext_resource type="StyleBox" uid="uid://c4fjdmqjxor23" path="res://resources/theme/buttons/emergency/normal.tres" id="6_1p5nq"]
+[ext_resource type="Texture2D" uid="uid://dlsahfd2hgj1y" path="res://textures/icons/memory_100dp_C0C6CF_FILL0_wght400_GRAD0_opsz48.png" id="7_apcft"]
+[ext_resource type="FontFile" uid="uid://rialxmc05q5i" path="res://fonts/FiraCode-SemiBold.ttf" id="8_vb5ih"]
+[ext_resource type="StyleBox" uid="uid://c2baf75nk07o8" path="res://resources/theme/buttons/mode/focus.tres" id="9_vb5ih"]
+[ext_resource type="FontFile" uid="uid://deh5g4p2thcwb" path="res://fonts/FiraCode-Medium.ttf" id="11_0jf8d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_brbbq"]
+content_margin_left = 24.0
+content_margin_top = 8.0
+content_margin_right = 24.0
+content_margin_bottom = 8.0
+bg_color = Color(0.05882353, 0.09019608, 0.16470589, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.11764706, 0.16078432, 0.23137255, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vb5ih"]
+bg_color = Color(0.03529412, 0.05490196, 0.11764706, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.050980393, 0.050980393, 0.050980393, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_0jf8d"]
+color = Color(0.14681268, 0.18191603, 0.26498267, 1)
+
+[node name="Control" type="Control" unique_id=1429478609 node_paths=PackedStringArray("_forwards", "_backwards", "_left", "_right")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_r67kn")
+script = ExtResource("1_5p55f")
+_forwards = NodePath("MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/MainCamera")
+_backwards = NodePath("MainMargin/RootVBox/ContentSplit/RightVisionSpan/BottomCameras/RearCamera")
+_left = NodePath("MainMargin/RootVBox/ContentSplit/RightVisionSpan/BottomCameras/LeftCamera")
+_right = NodePath("MainMargin/RootVBox/ContentSplit/RightVisionSpan/BottomCameras/RightCamera")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1510195555]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.007843138, 0.023529412, 0.09019608, 1)
+
+[node name="MainMargin" type="MarginContainer" parent="." unique_id=166141410]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="RootVBox" type="VBoxContainer" parent="MainMargin" unique_id=774548507]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="TopBarMargin" type="MarginContainer" parent="MainMargin/RootVBox" unique_id=533086153]
+layout_mode = 2
+
+[node name="GlassPill" type="PanelContainer" parent="MainMargin/RootVBox/TopBarMargin" unique_id=847803800]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_brbbq")
+
+[node name="TelemetryRow" type="HBoxContainer" parent="MainMargin/RootVBox/TopBarMargin/GlassPill" unique_id=1537517529]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="PingIcon" type="TextureRect" parent="MainMargin/RootVBox/TopBarMargin/GlassPill/TelemetryRow" unique_id=75621558]
+layout_mode = 2
+texture = ExtResource("3_tac8f")
+expand_mode = 2
+
+[node name="PingLabel" type="Label" parent="MainMargin/RootVBox/TopBarMargin/GlassPill/TelemetryRow" unique_id=692743933]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.20392157, 0.7764706, 0.5647059, 1)
+theme_override_fonts/font = ExtResource("8_vb5ih")
+text = "12ms"
+
+[node name="VSeparator" type="VSeparator" parent="MainMargin/RootVBox/TopBarMargin/GlassPill/TelemetryRow" unique_id=1942198077]
+layout_mode = 2
+
+[node name="MemoryIcon" type="TextureRect" parent="MainMargin/RootVBox/TopBarMargin/GlassPill/TelemetryRow" unique_id=1029275461]
+layout_mode = 2
+texture = ExtResource("4_vb5ih")
+expand_mode = 2
+
+[node name="MemoryLabel" type="Label" parent="MainMargin/RootVBox/TopBarMargin/GlassPill/TelemetryRow" unique_id=834723452]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_vb5ih")
+text = "42 GB"
+
+[node name="VSeparator1" type="VSeparator" parent="MainMargin/RootVBox/TopBarMargin/GlassPill/TelemetryRow" unique_id=1597177516]
+layout_mode = 2
+
+[node name="VoltageIcon" type="TextureRect" parent="MainMargin/RootVBox/TopBarMargin/GlassPill/TelemetryRow" unique_id=809702109]
+layout_mode = 2
+texture = ExtResource("5_6pn8l")
+expand_mode = 2
+
+[node name="VoltageLabel" type="Label" parent="MainMargin/RootVBox/TopBarMargin/GlassPill/TelemetryRow" unique_id=1117596948]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.98039216, 0.8, 0.08235294, 1)
+theme_override_fonts/font = ExtResource("8_vb5ih")
+text = "4.2V"
+
+[node name="VSeparator2" type="VSeparator" parent="MainMargin/RootVBox/TopBarMargin/GlassPill/TelemetryRow" unique_id=1096599047]
+layout_mode = 2
+
+[node name="AmpereIcon" type="TextureRect" parent="MainMargin/RootVBox/TopBarMargin/GlassPill/TelemetryRow" unique_id=452716311]
+layout_mode = 2
+texture = ExtResource("6_0jf8d")
+expand_mode = 2
+
+[node name="AmpereLabel" type="Label" parent="MainMargin/RootVBox/TopBarMargin/GlassPill/TelemetryRow" unique_id=641308283]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.13333334, 0.827451, 0.93333334, 1)
+theme_override_fonts/font = ExtResource("8_vb5ih")
+text = "5.0A"
+
+[node name="VSeparator3" type="VSeparator" parent="MainMargin/RootVBox/TopBarMargin/GlassPill/TelemetryRow" unique_id=937998745]
+layout_mode = 2
+
+[node name="CPUIcon" type="TextureRect" parent="MainMargin/RootVBox/TopBarMargin/GlassPill/TelemetryRow" unique_id=841305729]
+layout_mode = 2
+texture = ExtResource("7_apcft")
+expand_mode = 2
+
+[node name="CPULabel" type="Label" parent="MainMargin/RootVBox/TopBarMargin/GlassPill/TelemetryRow" unique_id=764145133]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_vb5ih")
+text = "45%"
+
+[node name="ContentSplit" type="HBoxContainer" parent="MainMargin/RootVBox" unique_id=963431207]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="LeftPanel" type="VBoxContainer" parent="MainMargin/RootVBox/ContentSplit" unique_id=402976971]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="DriveControl" type="PanelContainer" parent="MainMargin/RootVBox/ContentSplit/LeftPanel" unique_id=219602282]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/DriveControl" unique_id=1332850935]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/DriveControl/VBox" unique_id=2092535025]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.41663918, 0.4744783, 0.563175, 1)
+theme_override_fonts/font = ExtResource("8_vb5ih")
+text = "DRIVE CONTROL"
+
+[node name="PanelContainer" type="PanelContainer" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/DriveControl/VBox" unique_id=2074631301]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vb5ih")
+
+[node name="Margin" type="MarginContainer" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/DriveControl/VBox/PanelContainer" unique_id=479286146]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="ButtonsGrid" type="GridContainer" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/DriveControl/VBox/PanelContainer/Margin" unique_id=762013310]
+layout_mode = 2
+columns = 2
+
+[node name="Manual" type="Button" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/DriveControl/VBox/PanelContainer/Margin/ButtonsGrid" unique_id=978071727]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.13333334, 0.827451, 0.93333334, 1)
+theme_override_fonts/font = ExtResource("8_vb5ih")
+theme_override_styles/normal = ExtResource("9_vb5ih")
+text = "Manual"
+
+[node name="Auto" type="Button" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/DriveControl/VBox/PanelContainer/Margin/ButtonsGrid" unique_id=491784634]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.3882353, 0.44705883, 0.53333336, 1)
+theme_override_fonts/font = ExtResource("8_vb5ih")
+theme_override_styles/normal = ExtResource("3_1p5nq")
+text = "AI Auto"
+
+[node name="Autopilot" type="PanelContainer" parent="MainMargin/RootVBox/ContentSplit/LeftPanel" unique_id=525568518]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/Autopilot" unique_id=1751273696]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/Autopilot/VBox" unique_id=872618857]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.41568628, 0.4745098, 0.5647059, 1)
+theme_override_fonts/font = ExtResource("8_vb5ih")
+text = "AUTOPILOT ENGINE"
+
+[node name="ModelLabel" type="Label" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/Autopilot/VBox" unique_id=1262731277]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.74813354, 0.7769167, 0.8311917, 1)
+theme_override_fonts/font = ExtResource("11_0jf8d")
+theme_override_font_sizes/font_size = 11
+text = "ACTIVE MODEL"
+
+[node name="ModelSelect" type="OptionButton" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/Autopilot/VBox" unique_id=1377530322]
+layout_mode = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "pilotnet_v2_night.onnx"
+popup/item_0/id = 0
+popup/item_1/text = "comma_clone_base.pt"
+popup/item_1/id = 1
+
+[node name="HSeparator" type="HSeparator" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/Autopilot/VBox" unique_id=2007730380]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_0jf8d")
+
+[node name="DataRow" type="HBoxContainer" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/Autopilot/VBox" unique_id=1896306209]
+layout_mode = 2
+
+[node name="DataLabel" type="Label" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/Autopilot/VBox/DataRow" unique_id=71379964]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.7490196, 0.7764706, 0.83137256, 1)
+theme_override_fonts/font = ExtResource("11_0jf8d")
+theme_override_font_sizes/font_size = 11
+text = "DATA COLLECTION"
+
+[node name="FramesLabel" type="Label" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/Autopilot/VBox/DataRow" unique_id=137780195]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.51289004, 0.56582034, 0.64318985, 1)
+theme_override_font_sizes/font_size = 11
+text = "14,204 Frames"
+
+[node name="SessionInput" type="LineEdit" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/Autopilot/VBox" unique_id=30167777]
+layout_mode = 2
+placeholder_text = "Session Name (e.g. wet_track_01)"
+
+[node name="Record" type="Button" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/Autopilot/VBox" unique_id=1028026882]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.972549, 0.4392157, 0.4392157, 1)
+theme_override_styles/normal = ExtResource("4_lt2xq")
+text = "START RECORDING"
+
+[node name="LogsPanel" type="PanelContainer" parent="MainMargin/RootVBox/ContentSplit/LeftPanel" unique_id=2133700305]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBox" type="VBoxContainer" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/LogsPanel" unique_id=68748615]
+layout_mode = 2
+
+[node name="HeaderRow" type="HBoxContainer" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/LogsPanel/VBox" unique_id=517610522]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/LogsPanel/VBox/HeaderRow" unique_id=444370066]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.41568628, 0.4745098, 0.5647059, 1)
+text = "SYSTEM LOGS"
+
+[node name="Icon" type="Label" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/LogsPanel/VBox/HeaderRow" unique_id=1736644170]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.41568628, 0.4745098, 0.5647059, 1)
+text = ">_"
+
+[node name="LogOutput" type="RichTextLabel" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/LogsPanel/VBox" unique_id=1852232678]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.80784315, 0.83137256, 0.8745098, 1)
+text = "[14:02:01] QUIC Connected.
+[14:02:02] Received 4 Streams.
+[14:02:05] Session named 'track_day_01'.
+[14:05:12] WARN: Frame drop Cam 3."
+scroll_following = true
+
+[node name="RightVisionSpan" type="VBoxContainer" parent="MainMargin/RootVBox/ContentSplit" unique_id=1206574513]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 16
+
+[node name="MainCameraWrapper" type="Control" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan" unique_id=1351595502]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MainCamera" type="TextureRect" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper" unique_id=431733346]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_brbbq")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="EStopButton" type="Button" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper" unique_id=185558109]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 16.0
+offset_right = 100.0
+offset_bottom = 56.0
+grow_horizontal = 2
+theme_override_styles/normal = ExtResource("6_1p5nq")
+text = "E-STOP (SPACE)"
+
+[node name="SteeringHUD" type="PanelContainer" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper" unique_id=1477821376]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -80.0
+offset_right = 266.0
+offset_bottom = -16.0
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/SteeringHUD" unique_id=253372977]
+layout_mode = 2
+
+[node name="Labels" type="HBoxContainer" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/SteeringHUD/VBoxContainer" unique_id=1724518498]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/SteeringHUD/VBoxContainer/Labels" unique_id=1989826405]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.80784315, 0.83137256, 0.8745098, 1)
+text = "STEER"
+
+[node name="Value" type="Label" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/SteeringHUD/VBoxContainer/Labels" unique_id=261966257]
+layout_mode = 2
+text = "0.25"
+
+[node name="SteeringBar" type="ProgressBar" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/SteeringHUD/VBoxContainer" unique_id=2146621503]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+theme_override_styles/background = ExtResource("4_tjwpk")
+theme_override_styles/fill = ExtResource("5_lpubu")
+min_value = -1.0
+max_value = 1.0
+value = 0.25
+show_percentage = false
+
+[node name="ThrottleHUD" type="PanelContainer" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper" unique_id=2091587892]
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -176.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/ThrottleHUD" unique_id=2031873198]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Labels" type="VBoxContainer" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/ThrottleHUD/HBoxContainer" unique_id=1848876549]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Value" type="Label" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/ThrottleHUD/HBoxContainer/Labels" unique_id=820648556]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.80784315, 0.83137256, 0.8745098, 1)
+text = "0.34"
+
+[node name="Icon" type="Label" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/ThrottleHUD/HBoxContainer/Labels" unique_id=665435018]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.80784315, 0.83137256, 0.8745098, 1)
+text = "SPEED"
+
+[node name="ThrottleBar" type="ProgressBar" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/ThrottleHUD/HBoxContainer" unique_id=252053926]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 1
+theme_override_styles/background = ExtResource("4_tjwpk")
+theme_override_styles/fill = ExtResource("5_lpubu")
+max_value = 1.0
+value = 0.34
+fill_mode = 3
+show_percentage = false
+
+[node name="BottomCameras" type="HBoxContainer" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan" unique_id=1011819431]
+custom_minimum_size = Vector2(0, 224)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="LeftCamera" type="TextureRect" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/BottomCameras" unique_id=2039706042]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_brbbq")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="RearCamera" type="TextureRect" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/BottomCameras" unique_id=1033141846]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_brbbq")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="RightCamera" type="TextureRect" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/BottomCameras" unique_id=507498383]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_brbbq")
+expand_mode = 1
+stretch_mode = 6

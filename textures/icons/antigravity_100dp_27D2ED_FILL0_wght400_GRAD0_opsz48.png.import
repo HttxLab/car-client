@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dq50qugkqxpq4"
-path="res://.godot/imported/memory.png-723b2989489734624fb567d9860aeff7.ctex"
+uid="uid://dmqrb4b1bilgs"
+path="res://.godot/imported/antigravity_100dp_27D2ED_FILL0_wght400_GRAD0_opsz48.png-69942a86a1e731141e3c52323652f4fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/icons/memory.png"
-dest_files=["res://.godot/imported/memory.png-723b2989489734624fb567d9860aeff7.ctex"]
+source_file="res://textures/icons/antigravity_100dp_27D2ED_FILL0_wght400_GRAD0_opsz48.png"
+dest_files=["res://.godot/imported/antigravity_100dp_27D2ED_FILL0_wght400_GRAD0_opsz48.png-69942a86a1e731141e3c52323652f4fc.ctex"]
 
 [params]
 
