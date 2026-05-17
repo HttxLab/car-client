@@ -2,20 +2,28 @@
 
 [ext_resource type="Script" uid="uid://prry5txjx8uw" path="res://scripts/Main.cs" id="1_5p55f"]
 [ext_resource type="Theme" uid="uid://54dxe8xrafvk" path="res://resources/theme/global.tres" id="1_r67kn"]
-[ext_resource type="StyleBox" uid="uid://bhily0agsva63" path="res://resources/theme/buttons/mode/normal.tres" id="3_1p5nq"]
+[ext_resource type="StyleBox" uid="uid://bhily0agsva63" path="res://resources/theme/buttons/control/normal.tres" id="3_1p5nq"]
 [ext_resource type="Texture2D" uid="uid://b2bnbqin8ljvv" path="res://textures/testing/test.png" id="3_brbbq"]
 [ext_resource type="Texture2D" uid="uid://ckvi8gngxlcj3" path="res://textures/icons/network_ping_100dp_34C690_FILL0_wght400_GRAD0_opsz48.png" id="3_tac8f"]
-[ext_resource type="StyleBox" uid="uid://cyx11d7mnt6dh" path="res://resources/theme/buttons/red/normal.tres" id="4_lt2xq"]
+[ext_resource type="StyleBox" uid="uid://cyx11d7mnt6dh" path="res://resources/theme/buttons/emergency/normal.tres" id="4_lt2xq"]
 [ext_resource type="StyleBox" uid="uid://c3u7ityhvvopl" path="res://resources/theme/bars/background.tres" id="4_tjwpk"]
 [ext_resource type="Texture2D" uid="uid://cgoi75u071e63" path="res://textures/icons/memory_alt_100dp_C4CAD3_FILL0_wght400_GRAD0_opsz48.png" id="4_vb5ih"]
 [ext_resource type="Texture2D" uid="uid://bqtldf70dnd50" path="res://textures/icons/electric_bolt_100dp_F9CB1C_FILL0_wght400_GRAD0_opsz48.png" id="5_6pn8l"]
 [ext_resource type="StyleBox" uid="uid://bii3ibiimuegy" path="res://resources/theme/bars/fill.tres" id="5_lpubu"]
 [ext_resource type="Texture2D" uid="uid://dmqrb4b1bilgs" path="res://textures/icons/antigravity_100dp_27D2ED_FILL0_wght400_GRAD0_opsz48.png" id="6_0jf8d"]
-[ext_resource type="StyleBox" uid="uid://c4fjdmqjxor23" path="res://resources/theme/buttons/emergency/normal.tres" id="6_1p5nq"]
 [ext_resource type="Texture2D" uid="uid://dlsahfd2hgj1y" path="res://textures/icons/memory_100dp_C0C6CF_FILL0_wght400_GRAD0_opsz48.png" id="7_apcft"]
 [ext_resource type="FontFile" uid="uid://rialxmc05q5i" path="res://fonts/FiraCode-SemiBold.ttf" id="8_vb5ih"]
-[ext_resource type="StyleBox" uid="uid://c2baf75nk07o8" path="res://resources/theme/buttons/mode/focus.tres" id="9_vb5ih"]
+[ext_resource type="StyleBox" uid="uid://c2baf75nk07o8" path="res://resources/theme/buttons/control/focus.tres" id="9_vb5ih"]
+[ext_resource type="StyleBox" uid="uid://d0ptat4hp2wcd" path="res://resources/theme/buttons/control/hover.tres" id="10_mmsp5"]
 [ext_resource type="FontFile" uid="uid://deh5g4p2thcwb" path="res://fonts/FiraCode-Medium.ttf" id="11_0jf8d"]
+[ext_resource type="StyleBox" uid="uid://bkugftgn5vuc4" path="res://resources/theme/buttons/record/normal.tres" id="13_6uaey"]
+[ext_resource type="FontFile" uid="uid://cdjgvmk8fl4i4" path="res://fonts/FiraCode-Bold.ttf" id="14_2pn8f"]
+[ext_resource type="StyleBox" uid="uid://bx3vj37ir8e3a" path="res://resources/theme/buttons/record/hover.tres" id="14_sej5b"]
+[ext_resource type="Texture2D" uid="uid://b04dvo5qtadpm" path="res://textures/icons/search_hands_free_100dp_27D2ED_FILL0_wght400_GRAD0_opsz48.png" id="15_2pn8f"]
+[ext_resource type="StyleBox" uid="uid://657phsfq2nx0" path="res://resources/theme/buttons/emergency/hover.tres" id="15_tfhda"]
+[ext_resource type="StyleBox" uid="uid://d005t81fvu4xk" path="res://resources/theme/buttons/record/pressed.tres" id="15_usxgj"]
+[ext_resource type="Texture2D" uid="uid://4vihsmsghksy" path="res://textures/icons/rocket_launch_100dp_27D2ED_FILL0_wght400_GRAD0_opsz48.png" id="18_tfhda"]
+[ext_resource type="StyleBox" uid="uid://cioqmiwg8q7sb" path="res://resources/theme/buttons/emergency/pressed.tres" id="19_6uaey"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_brbbq"]
 content_margin_left = 24.0
@@ -39,7 +47,7 @@ border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.050980393, 0.050980393, 0.050980393, 1)
+border_color = Color(0.1882353, 0.23529412, 0.31764707, 1)
 corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6
@@ -47,6 +55,22 @@ corner_radius_bottom_left = 6
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_0jf8d"]
 color = Color(0.14681268, 0.18191603, 0.26498267, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_db4rb"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.05882353, 0.18431373, 0.25882354, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.023529412, 0.7137255, 0.83137256, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
 
 [node name="Control" type="Control" unique_id=1429478609 node_paths=PackedStringArray("_forwards", "_backwards", "_left", "_right")]
 layout_mode = 3
@@ -211,6 +235,9 @@ size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.13333334, 0.827451, 0.93333334, 1)
 theme_override_fonts/font = ExtResource("8_vb5ih")
 theme_override_styles/normal = ExtResource("9_vb5ih")
+theme_override_styles/pressed = ExtResource("3_1p5nq")
+theme_override_styles/hover = ExtResource("10_mmsp5")
+theme_override_styles/focus = ExtResource("9_vb5ih")
 text = "Manual"
 
 [node name="Auto" type="Button" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/DriveControl/VBox/PanelContainer/Margin/ButtonsGrid" unique_id=491784634]
@@ -219,6 +246,9 @@ size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.3882353, 0.44705883, 0.53333336, 1)
 theme_override_fonts/font = ExtResource("8_vb5ih")
 theme_override_styles/normal = ExtResource("3_1p5nq")
+theme_override_styles/pressed = ExtResource("3_1p5nq")
+theme_override_styles/hover = ExtResource("10_mmsp5")
+theme_override_styles/focus = ExtResource("9_vb5ih")
 text = "AI Auto"
 
 [node name="Autopilot" type="PanelContainer" parent="MainMargin/RootVBox/ContentSplit/LeftPanel" unique_id=525568518]
@@ -277,8 +307,11 @@ placeholder_text = "Session Name (e.g. wet_track_01)"
 
 [node name="Record" type="Button" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/Autopilot/VBox" unique_id=1028026882]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.972549, 0.4392157, 0.4392157, 1)
-theme_override_styles/normal = ExtResource("4_lt2xq")
+theme_override_colors/font_color = Color(0.7058824, 0.7490196, 0.8, 1)
+theme_override_styles/normal = ExtResource("13_6uaey")
+theme_override_styles/pressed = ExtResource("15_usxgj")
+theme_override_styles/hover = ExtResource("14_sej5b")
+theme_override_styles/focus = SubResource("StyleBoxFlat_db4rb")
 text = "START RECORDING"
 
 [node name="LogsPanel" type="PanelContainer" parent="MainMargin/RootVBox/ContentSplit/LeftPanel" unique_id=2133700305]
@@ -305,7 +338,7 @@ text = ">_"
 [node name="LogOutput" type="RichTextLabel" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/LogsPanel/VBox" unique_id=1852232678]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/default_color = Color(0.80784315, 0.83137256, 0.8745098, 1)
+theme_override_colors/default_color = Color(0.67795324, 0.71447587, 0.7815955, 1)
 text = "[14:02:01] QUIC Connected.
 [14:02:02] Received 4 Streams.
 [14:02:05] Session named 'track_day_01'.
@@ -342,7 +375,10 @@ offset_top = 16.0
 offset_right = 100.0
 offset_bottom = 56.0
 grow_horizontal = 2
-theme_override_styles/normal = ExtResource("6_1p5nq")
+theme_override_fonts/font = ExtResource("14_2pn8f")
+theme_override_styles/normal = ExtResource("4_lt2xq")
+theme_override_styles/pressed = ExtResource("19_6uaey")
+theme_override_styles/hover = ExtResource("15_tfhda")
 text = "E-STOP (SPACE)"
 
 [node name="SteeringHUD" type="PanelContainer" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper" unique_id=1477821376]
@@ -351,26 +387,30 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 16.0
-offset_top = -80.0
-offset_right = 266.0
-offset_bottom = -16.0
+offset_left = 15.0
+offset_top = -90.0
+offset_right = 265.0
+offset_bottom = -11.0
 grow_vertical = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/SteeringHUD" unique_id=253372977]
 layout_mode = 2
+theme_override_constants/separation = 6
 
 [node name="Labels" type="HBoxContainer" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/SteeringHUD/VBoxContainer" unique_id=1724518498]
 layout_mode = 2
 
-[node name="Title" type="Label" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/SteeringHUD/VBoxContainer/Labels" unique_id=1989826405]
+[node name="Icon" type="TextureRect" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/SteeringHUD/VBoxContainer/Labels" unique_id=1850116533]
+custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_colors/font_color = Color(0.80784315, 0.83137256, 0.8745098, 1)
-text = "STEER"
+texture = ExtResource("15_2pn8f")
+expand_mode = 1
+stretch_mode = 4
 
-[node name="Value" type="Label" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/SteeringHUD/VBoxContainer/Labels" unique_id=261966257]
+[node name="Value" type="Label" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/SteeringHUD/VBoxContainer/Labels" unique_id=1685757925]
 layout_mode = 2
+theme_override_font_sizes/font_size = 10
 text = "0.25"
 
 [node name="SteeringBar" type="ProgressBar" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/SteeringHUD/VBoxContainer" unique_id=2146621503]
@@ -382,51 +422,50 @@ min_value = -1.0
 max_value = 1.0
 value = 0.25
 show_percentage = false
+indeterminate = true
+editor_preview_indeterminate = false
 
 [node name="ThrottleHUD" type="PanelContainer" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper" unique_id=2091587892]
-custom_minimum_size = Vector2(0, 160)
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -100.0
-offset_top = -176.0
-offset_right = -16.0
-offset_bottom = -16.0
+offset_left = -71.0
+offset_top = -213.0
+offset_right = -15.0
+offset_bottom = -13.0
 grow_horizontal = 0
 grow_vertical = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/ThrottleHUD" unique_id=2031873198]
+[node name="HBoxContainer" type="VBoxContainer" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/ThrottleHUD" unique_id=489313540]
 layout_mode = 2
-theme_override_constants/separation = 16
+theme_override_constants/separation = 6
 
-[node name="Labels" type="VBoxContainer" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/ThrottleHUD/HBoxContainer" unique_id=1848876549]
+[node name="Icon" type="TextureRect" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/ThrottleHUD/HBoxContainer" unique_id=1417770360]
 layout_mode = 2
-size_flags_vertical = 8
+texture = ExtResource("18_tfhda")
+expand_mode = 4
 
-[node name="Value" type="Label" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/ThrottleHUD/HBoxContainer/Labels" unique_id=820648556]
+[node name="Value" type="Label" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/ThrottleHUD/HBoxContainer" unique_id=1120527310]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.80784315, 0.83137256, 0.8745098, 1)
-text = "0.34"
-
-[node name="Icon" type="Label" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/ThrottleHUD/HBoxContainer/Labels" unique_id=665435018]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.80784315, 0.83137256, 0.8745098, 1)
-text = "SPEED"
+theme_override_font_sizes/font_size = 10
+text = "0.25"
 
 [node name="ThrottleBar" type="ProgressBar" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan/MainCameraWrapper/ThrottleHUD/HBoxContainer" unique_id=252053926]
 custom_minimum_size = Vector2(16, 0)
 layout_mode = 2
-size_flags_horizontal = 10
-size_flags_vertical = 1
+size_flags_horizontal = 4
+size_flags_vertical = 3
 theme_override_styles/background = ExtResource("4_tjwpk")
 theme_override_styles/fill = ExtResource("5_lpubu")
 max_value = 1.0
 value = 0.34
 fill_mode = 3
 show_percentage = false
+indeterminate = true
+editor_preview_indeterminate = false
 
 [node name="BottomCameras" type="HBoxContainer" parent="MainMargin/RootVBox/ContentSplit/RightVisionSpan" unique_id=1011819431]
 custom_minimum_size = Vector2(0, 224)
