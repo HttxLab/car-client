@@ -1,0 +1,210 @@
+[gd_scene format=3 uid="uid://b2ji7e2l4pe4w"]
+
+[ext_resource type="Script" uid="uid://c3hbnm4i4g5gr" path="res://Scripts/Components/Discovery/Service.cs" id="1_1xom6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uhfav"]
+content_margin_left = 20.0
+content_margin_top = 16.0
+content_margin_right = 20.0
+content_margin_bottom = 16.0
+bg_color = Color(0.058824, 0.090196, 0.164706, 0.8)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.196078, 0.254902, 0.333333, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hyfs0"]
+bg_color = Color(0.007843, 0.023529, 0.090196, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.117647, 0.160784, 0.231373, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1xom6"]
+content_margin_left = 6.0
+content_margin_top = 2.0
+content_margin_right = 6.0
+content_margin_bottom = 2.0
+bg_color = Color(0.062745, 0.72549, 0.462745, 0.2)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.062745, 0.72549, 0.462745, 0.3)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h4r0h"]
+content_margin_left = 24.0
+content_margin_top = 10.0
+content_margin_right = 24.0
+content_margin_bottom = 10.0
+bg_color = Color(0.0995922, 0.78814995, 0.89240426, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.17186105, 0.84751743, 0.94909674, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3r1cy"]
+content_margin_left = 24.0
+content_margin_top = 10.0
+content_margin_right = 24.0
+content_margin_bottom = 10.0
+bg_color = Color(0.0995922, 0.78814995, 0.89240426, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.17186105, 0.84751743, 0.94909674, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3wnql"]
+content_margin_left = 24.0
+content_margin_top = 10.0
+content_margin_right = 24.0
+content_margin_bottom = 10.0
+bg_color = Color(0.29970255, 0.88737315, 0.9881112, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Service" type="PanelContainer" unique_id=601421218]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_uhfav")
+script = ExtResource("1_1xom6")
+
+[node name="Layout" type="HBoxContainer" parent="." unique_id=339206175]
+layout_mode = 2
+
+[node name="LeftInfo" type="HBoxContainer" parent="Layout" unique_id=1667246068]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="IconPanel" type="PanelContainer" parent="Layout/LeftInfo" unique_id=594905840]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_hyfs0")
+
+[node name="IconLabel" type="Label" parent="Layout/LeftInfo/IconPanel" unique_id=1488672310]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.133333, 0.827451, 0.933333, 1)
+theme_override_font_sizes/font_size = 20
+text = "🚗"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextRows" type="VBoxContainer" parent="Layout/LeftInfo" unique_id=1498494832]
+layout_mode = 2
+alignment = 1
+
+[node name="NameRow" type="HBoxContainer" parent="Layout/LeftInfo/TextRows" unique_id=1463378854]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Name" type="Label" parent="Layout/LeftInfo/TextRows/NameRow" unique_id=559116612]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "...."
+
+[node name="Badge" type="Label" parent="Layout/LeftInfo/TextRows/NameRow" unique_id=329158382]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.203922, 0.862745, 0.584314, 1)
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_1xom6")
+text = "READY"
+
+[node name="IPRow" type="Label" parent="Layout/LeftInfo/TextRows" unique_id=639348707]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.592157, 0.654902, 0.72549, 1)
+theme_override_font_sizes/font_size = 12
+text = "...."
+
+[node name="RightActions" type="HBoxContainer" parent="Layout" unique_id=2056287754]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="TxtRecords" type="HBoxContainer" parent="Layout/RightActions" unique_id=1179215066]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Battery" type="VBoxContainer" parent="Layout/RightActions/TxtRecords" unique_id=135997945]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Layout/RightActions/TxtRecords/Battery" unique_id=2000400272]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.415686, 0.47451, 0.564706, 1)
+theme_override_font_sizes/font_size = 9
+text = "BATTERY"
+horizontal_alignment = 2
+
+[node name="Value" type="Label" parent="Layout/RightActions/TxtRecords/Battery" unique_id=1126873278]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.980392, 0.8, 0.0823529, 1)
+theme_override_font_sizes/font_size = 12
+text = "...."
+horizontal_alignment = 2
+
+[node name="Cameras" type="VBoxContainer" parent="Layout/RightActions/TxtRecords" unique_id=1712181302]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Layout/RightActions/TxtRecords/Cameras" unique_id=23244382]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.415686, 0.47451, 0.564706, 1)
+theme_override_font_sizes/font_size = 9
+text = "CAMERAS"
+horizontal_alignment = 2
+
+[node name="Value" type="Label" parent="Layout/RightActions/TxtRecords/Cameras" unique_id=194613661]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.796078, 0.827451, 0.866667, 1)
+theme_override_font_sizes/font_size = 12
+text = "...."
+horizontal_alignment = 2
+
+[node name="LockedInfo" type="Label" parent="Layout/RightActions" unique_id=1852598815]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.415686, 0.47451, 0.564706, 1)
+theme_override_font_sizes/font_size = 12
+text = "🔒 Connected by ...."
+
+[node name="Button" type="Button" parent="Layout/RightActions" unique_id=1040953333]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.007843, 0.023529, 0.090196, 1)
+theme_override_colors/font_pressed_color = Color(0.007843, 0.023529, 0.090196, 1)
+theme_override_colors/font_hover_color = Color(0.007843, 0.023529, 0.090196, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_h4r0h")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3r1cy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3wnql")
+text = "CONNECT"

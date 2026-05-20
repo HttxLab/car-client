@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://c6sj4tpc7jo2v"
-path="res://.godot/imported/FiraCode-Light.ttf-c419758d7e4a9fcf06ca8f213e2aa120.fontdata"
+path="res://.godot/imported/firacode-light.ttf-db9ac4feade64874a1e5923486d5f47d.fontdata"
 
 [deps]
 
-source_file="res://fonts/FiraCode-Light.ttf"
-dest_files=["res://.godot/imported/FiraCode-Light.ttf-c419758d7e4a9fcf06ca8f213e2aa120.fontdata"]
+source_file="res://fonts/firacode-light.ttf"
+dest_files=["res://.godot/imported/firacode-light.ttf-db9ac4feade64874a1e5923486d5f47d.fontdata"]
 
 [params]
 

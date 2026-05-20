@@ -1,9 +1,10 @@
 [gd_resource type="Theme" format=3 uid="uid://54dxe8xrafvk"]
 
-[ext_resource type="FontFile" uid="uid://rialxmc05q5i" path="res://fonts/FiraCode-SemiBold.ttf" id="1_3w35y"]
-[ext_resource type="FontFile" uid="uid://fnctki4ea0oh" path="res://fonts/FiraCode-Regular.ttf" id="1_uxvbd"]
+[ext_resource type="FontFile" uid="uid://rialxmc05q5i" path="res://fonts/firacode-semibold.ttf" id="1_3w35y"]
+[ext_resource type="FontFile" uid="uid://fnctki4ea0oh" path="res://fonts/firacode-regular.ttf" id="1_uxvbd"]
+[ext_resource type="FontFile" uid="uid://deh5g4p2thcwb" path="res://fonts/firacode-medium.ttf" id="2_kjvmc"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3w35y"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjvmc"]
 content_margin_left = 8.0
 content_margin_top = 8.0
 content_margin_right = 8.0
@@ -19,7 +20,7 @@ corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjvmc"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nbxoi"]
 content_margin_left = 8.0
 content_margin_top = 8.0
 content_margin_right = 8.0
@@ -99,15 +100,67 @@ corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_3w35y"]
+size = Vector2(0, 0)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kjvmc"]
+size = Vector2(0, 0)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_oiour"]
+size = Vector2(0, 0)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_a5pf5"]
+size = Vector2(0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gtx18"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.03529412, 0.05490196, 0.11764706, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.13333334, 0.827451, 0.93333334, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vix7g"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.03529412, 0.05490196, 0.11764706, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.1882353, 0.23529412, 0.31764707, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
 [resource]
 default_font = ExtResource("1_uxvbd")
 default_font_size = 13
 LineEdit/font_sizes/font_size = 12
 LineEdit/fonts/font = ExtResource("1_3w35y")
-LineEdit/styles/focus = SubResource("StyleBoxFlat_3w35y")
-LineEdit/styles/normal = SubResource("StyleBoxFlat_kjvmc")
+LineEdit/styles/focus = SubResource("StyleBoxFlat_kjvmc")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_nbxoi")
 OptionButton/fonts/font = ExtResource("1_3w35y")
 OptionButton/styles/hover = SubResource("StyleBoxFlat_a5pf5")
 OptionButton/styles/normal = SubResource("StyleBoxFlat_oiour")
 OptionButton/styles/pressed = SubResource("StyleBoxFlat_b2x3r")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_uxvbd")
+PopupMenu/colors/font_color = Color(1, 1, 1, 1)
+PopupMenu/fonts/font = ExtResource("2_kjvmc")
+PopupMenu/icons/radio_checked = SubResource("PlaceholderTexture2D_3w35y")
+PopupMenu/icons/radio_checked_disabled = SubResource("PlaceholderTexture2D_kjvmc")
+PopupMenu/icons/radio_unchecked = SubResource("PlaceholderTexture2D_oiour")
+PopupMenu/icons/radio_unchecked_disabled = SubResource("PlaceholderTexture2D_a5pf5")
+PopupMenu/styles/hover = SubResource("StyleBoxFlat_gtx18")
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_vix7g")

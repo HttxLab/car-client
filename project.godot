@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Car Client"
 config/version="v0.0.1"
-run/main_scene="uid://do6o1xouj7f07"
+run/main_scene="uid://csg040rev5w4p"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 boot_splash/use_filter=false
 boot_splash/image="uid://ciivryxpjv284"
@@ -21,6 +21,10 @@ config/icon="uid://ciivryxpjv284"
 [dotnet]
 
 project/assembly_name="CarClient"
+
+[editor]
+
+movie_writer/movie_file="/home/rafael/Desktop/test.avi"
 
 [physics]
 

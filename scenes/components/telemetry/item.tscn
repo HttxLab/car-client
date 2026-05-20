@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c35nwtj6r5k7x"]
+
+[ext_resource type="Script" uid="uid://bawhebybkikbv" path="res://Scripts/Components/Telemetry/Item.cs" id="1_jadxl"]
+[ext_resource type="FontFile" uid="uid://rialxmc05q5i" path="res://fonts/firacode-semibold.ttf" id="2_n8pbf"]
+
+[node name="Item" type="HBoxContainer" unique_id=1460076399]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+script = ExtResource("1_jadxl")
+
+[node name="Icon" type="TextureRect" parent="." unique_id=349719311]
+layout_mode = 2
+expand_mode = 2
+
+[node name="Label" type="Label" parent="." unique_id=1484583876]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_n8pbf")
+text = "....."
+
+[node name="Separator" type="VSeparator" parent="." unique_id=1665820266]
+visible = false
+layout_mode = 2

@@ -1,0 +1,189 @@
+[gd_scene format=3 uid="uid://csg040rev5w4p"]
+
+[ext_resource type="Theme" uid="uid://54dxe8xrafvk" path="res://resources/theme/global.tres" id="1_jm4y5"]
+[ext_resource type="Texture2D" uid="uid://dvef6hwnogbwc" path="res://textures/icons/search_100dp_22D3EE_FILL0_wght400_GRAD0_opsz48.png" id="2_fftnt"]
+[ext_resource type="PackedScene" uid="uid://b2ji7e2l4pe4w" path="res://scenes/components/discovery/service.tscn" id="3_fftnt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gwv7l"]
+content_margin_left = 16.0
+content_margin_top = 6.0
+content_margin_right = 16.0
+content_margin_bottom = 6.0
+bg_color = Color(0.133333, 0.827451, 0.933333, 0.1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.13333334, 0.827451, 0.93333334, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vmgfa"]
+content_margin_left = 24.0
+content_margin_top = 10.0
+content_margin_right = 24.0
+content_margin_bottom = 10.0
+bg_color = Color(0.117647, 0.160784, 0.231373, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.196078, 0.254902, 0.333333, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2tr76"]
+content_margin_left = 24.0
+content_margin_top = 10.0
+content_margin_right = 24.0
+content_margin_bottom = 10.0
+bg_color = Color(0.117647, 0.160784, 0.231373, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.196078, 0.254902, 0.333333, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fftnt"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.15028432, 0.19886887, 0.2839468, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.21572882, 0.27869716, 0.36266008, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="Connect" type="Control" unique_id=449910911]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_jm4y5")
+
+[node name="Background" type="ColorRect" parent="." unique_id=914804843]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.007843138, 0.023529412, 0.09019608, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1323739762]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainColumn" type="VBoxContainer" parent="CenterContainer" unique_id=663064236]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Header" type="VBoxContainer" parent="CenterContainer/MainColumn" unique_id=1963200456]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="PillContainer" type="CenterContainer" parent="CenterContainer/MainColumn/Header" unique_id=326131055]
+layout_mode = 2
+
+[node name="StatusPill" type="PanelContainer" parent="CenterContainer/MainColumn/Header/PillContainer" unique_id=523939793]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gwv7l")
+
+[node name="HBox" type="HBoxContainer" parent="CenterContainer/MainColumn/Header/PillContainer/StatusPill" unique_id=765135563]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Icon" type="TextureRect" parent="CenterContainer/MainColumn/Header/PillContainer/StatusPill/HBox" unique_id=313388935]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("2_fftnt")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/MainColumn/Header/PillContainer/StatusPill/HBox" unique_id=650481207]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.133333, 0.827451, 0.933333, 1)
+theme_override_font_sizes/font_size = 12
+text = "mDNS Discovery active"
+vertical_alignment = 1
+
+[node name="Title" type="Label" parent="CenterContainer/MainColumn/Header" unique_id=1697120720]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Vehicle Discovery"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="CenterContainer/MainColumn/Header" unique_id=582996268]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.592157, 0.654902, 0.72549, 1)
+theme_override_font_sizes/font_size = 14
+text = "Scanning for mDNS entries..."
+horizontal_alignment = 1
+
+[node name="Vehicles" type="VBoxContainer" parent="CenterContainer/MainColumn" unique_id=335871965]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Service" parent="CenterContainer/MainColumn/Vehicles" unique_id=601421218 instance=ExtResource("3_fftnt")]
+layout_mode = 2
+
+[node name="Divider" type="HBoxContainer" parent="CenterContainer/MainColumn" unique_id=512130956]
+modulate = Color(1, 1, 1, 0.5)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Sep1" type="HSeparator" parent="CenterContainer/MainColumn/Divider" unique_id=1056553466]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="CenterContainer/MainColumn/Divider" unique_id=545774797]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.415686, 0.47451, 0.564706, 1)
+theme_override_font_sizes/font_size = 10
+text = "OR MANUAL OVERRIDE"
+
+[node name="Sep2" type="HSeparator" parent="CenterContainer/MainColumn/Divider" unique_id=639431702]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DirectConnect" type="PanelContainer" parent="CenterContainer/MainColumn" unique_id=1344510949]
+layout_mode = 2
+
+[node name="HBox" type="HBoxContainer" parent="CenterContainer/MainColumn/DirectConnect" unique_id=1451042263]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Address" type="LineEdit" parent="CenterContainer/MainColumn/DirectConnect/HBox" unique_id=963636023]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+placeholder_text = "Enter IP Address (e.g. 192.168.1.100:5000)"
+
+[node name="DirectConnect" type="Button" parent="CenterContainer/MainColumn/DirectConnect/HBox" unique_id=280459270]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.796078, 0.827451, 0.866667, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_vmgfa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2tr76")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fftnt")
+text = "DIRECT CONNECT"
