@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://do6o1xouj7f07"]
+
+[ext_resource type="Script" uid="uid://b5qks51npsojp" path="res://C#/Controller.cs" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://csg040rev5w4p" path="res://scenes/screens/discovery.tscn" id="2_sugp2"]
+[ext_resource type="PackedScene" uid="uid://62dl23h6fq7g" path="res://scenes/screens/dashboard.tscn" id="3_jyhfs"]
+
+[node name="Controller" type="Node" unique_id=635146848]
+script = ExtResource("1_o5qli")
+_discovery = ExtResource("2_sugp2")
+_dashboard = ExtResource("3_jyhfs")

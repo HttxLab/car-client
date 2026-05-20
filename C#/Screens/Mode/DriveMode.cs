@@ -1,27 +1,25 @@
 using Godot;
 
-namespace CarClient.Scripts.Screens.Control;
+namespace CarClient.C_.Screens.Mode;
 
-public partial class DriveControl : PanelContainer
-{
+public partial class DriveMode : PanelContainer {
+	
 	[Export] private Button _manualDriveButton;
 	[Export] private Button _autoDriveButton;
 	
-	public override void _Ready()
-	{
+	public override void _Ready() {
 		_manualDriveButton.Pressed += OnManualPressed;
 		_autoDriveButton.Pressed += OnAutoPressed;
 	}
 
-	private void OnManualPressed()
-	{
+	private void OnManualPressed() {
 		_manualDriveButton.Disabled = true;
 		_autoDriveButton.Disabled = false;
 	}
 	
-	private void OnAutoPressed()
-	{
+	private void OnAutoPressed() {
 		_autoDriveButton.Disabled = true;
 		_manualDriveButton.Disabled = false;
 	}
+	
 }

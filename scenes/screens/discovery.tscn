@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://csg040rev5w4p"]
 
 [ext_resource type="Theme" uid="uid://54dxe8xrafvk" path="res://resources/theme/global.tres" id="1_jm4y5"]
+[ext_resource type="Script" uid="uid://y0vy7n0jqvo7" path="res://C#/Screens/Discovery.cs" id="2_2tr76"]
 [ext_resource type="Texture2D" uid="uid://dvef6hwnogbwc" path="res://textures/icons/search_100dp_22D3EE_FILL0_wght400_GRAD0_opsz48.png" id="2_fftnt"]
-[ext_resource type="PackedScene" uid="uid://b2ji7e2l4pe4w" path="res://scenes/components/discovery/service.tscn" id="3_fftnt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gwv7l"]
 content_margin_left = 16.0
@@ -68,7 +68,7 @@ corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
-[node name="Connect" type="Control" unique_id=449910911]
+[node name="Discovery" type="Control" unique_id=449910911]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -76,6 +76,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_jm4y5")
+script = ExtResource("2_2tr76")
+_serviceType = "_car-telemetry._udp.local."
+
+[node name="Timer" type="Timer" parent="." unique_id=1012633655]
+process_callback = 0
+wait_time = 4.0
+autostart = true
 
 [node name="Background" type="ColorRect" parent="." unique_id=914804843]
 layout_mode = 1
@@ -124,7 +131,7 @@ expand_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0.133333, 0.827451, 0.933333, 1)
 theme_override_font_sizes/font_size = 12
-text = "mDNS Discovery active"
+text = "mDNS Discovery"
 vertical_alignment = 1
 
 [node name="Title" type="Label" parent="CenterContainer/MainColumn/Header" unique_id=1697120720]
@@ -137,15 +144,13 @@ horizontal_alignment = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.592157, 0.654902, 0.72549, 1)
 theme_override_font_sizes/font_size = 14
-text = "Scanning for mDNS entries..."
+text = "Scanning for _car-telemetry._udp.local..."
 horizontal_alignment = 1
 
 [node name="Vehicles" type="VBoxContainer" parent="CenterContainer/MainColumn" unique_id=335871965]
+visible = false
 layout_mode = 2
 theme_override_constants/separation = 12
-
-[node name="Service" parent="CenterContainer/MainColumn/Vehicles" unique_id=601421218 instance=ExtResource("3_fftnt")]
-layout_mode = 2
 
 [node name="Divider" type="HBoxContainer" parent="CenterContainer/MainColumn" unique_id=512130956]
 modulate = Color(1, 1, 1, 0.5)
@@ -167,6 +172,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="DirectConnect" type="PanelContainer" parent="CenterContainer/MainColumn" unique_id=1344510949]
+custom_minimum_size = Vector2(581.71, 0)
 layout_mode = 2
 
 [node name="HBox" type="HBoxContainer" parent="CenterContainer/MainColumn/DirectConnect" unique_id=1451042263]

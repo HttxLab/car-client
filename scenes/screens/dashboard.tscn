@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://62dl23h6fq7g"]
 
 [ext_resource type="Theme" uid="uid://54dxe8xrafvk" path="res://resources/theme/global.tres" id="1_c8cpn"]
-[ext_resource type="Script" uid="uid://prry5txjx8uw" path="res://Scripts/Control.cs" id="2_yjv5r"]
 [ext_resource type="Texture2D" uid="uid://ckvi8gngxlcj3" path="res://textures/icons/network_ping_100dp_34C690_FILL0_wght400_GRAD0_opsz48.png" id="3_ges7t"]
 [ext_resource type="PackedScene" uid="uid://c35nwtj6r5k7x" path="res://scenes/components/telemetry/item.tscn" id="3_yjv5r"]
 [ext_resource type="FontFile" uid="uid://rialxmc05q5i" path="res://fonts/firacode-semibold.ttf" id="4_5ta8r"]
@@ -10,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dmqrb4b1bilgs" path="res://textures/icons/antigravity_100dp_27D2ED_FILL0_wght400_GRAD0_opsz48.png" id="7_dv1xe"]
 [ext_resource type="Texture2D" uid="uid://dlsahfd2hgj1y" path="res://textures/icons/memory_100dp_C0C6CF_FILL0_wght400_GRAD0_opsz48.png" id="8_h3ch8"]
 [ext_resource type="StyleBox" uid="uid://c2baf75nk07o8" path="res://resources/theme/buttons/mode/disabled.tres" id="9_dpjyv"]
-[ext_resource type="Script" uid="uid://b2p22xbqjeai1" path="res://Scripts/Screens/Control/DriveControl.cs" id="9_ges7t"]
+[ext_resource type="Script" uid="uid://b2p22xbqjeai1" path="res://C#/Screens/Mode/DriveMode.cs" id="9_jqayc"]
 [ext_resource type="StyleBox" uid="uid://bhily0agsva63" path="res://resources/theme/buttons/mode/normal.tres" id="10_fxegw"]
 [ext_resource type="StyleBox" uid="uid://d0ptat4hp2wcd" path="res://resources/theme/buttons/mode/hover.tres" id="11_mrbkc"]
 [ext_resource type="FontFile" uid="uid://deh5g4p2thcwb" path="res://fonts/firacode-medium.ttf" id="12_jqnbc"]
@@ -162,7 +161,6 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("1_c8cpn")
-script = ExtResource("2_yjv5r")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1510195555]
 layout_mode = 1
@@ -238,31 +236,31 @@ custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="DriveControl" type="PanelContainer" parent="MainMargin/RootVBox/ContentSplit/LeftPanel" unique_id=219602282 node_paths=PackedStringArray("_manualDriveButton", "_autoDriveButton")]
+[node name="DriveMode" type="PanelContainer" parent="MainMargin/RootVBox/ContentSplit/LeftPanel" unique_id=219602282 node_paths=PackedStringArray("_manualDriveButton", "_autoDriveButton")]
 layout_mode = 2
-script = ExtResource("9_ges7t")
+script = ExtResource("9_jqayc")
 _manualDriveButton = NodePath("VBox/PanelContainer/ModeSelect/Manual")
 _autoDriveButton = NodePath("VBox/PanelContainer/ModeSelect/Auto")
 
-[node name="VBox" type="VBoxContainer" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/DriveControl" unique_id=1332850935]
+[node name="VBox" type="VBoxContainer" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/DriveMode" unique_id=1332850935]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="Title" type="Label" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/DriveControl/VBox" unique_id=2092535025]
+[node name="Title" type="Label" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/DriveMode/VBox" unique_id=2092535025]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.41663918, 0.4744783, 0.563175, 1)
 theme_override_fonts/font = ExtResource("4_5ta8r")
 text = "DRIVE CONTROL"
 
-[node name="PanelContainer" type="PanelContainer" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/DriveControl/VBox" unique_id=2074631301]
+[node name="PanelContainer" type="PanelContainer" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/DriveMode/VBox" unique_id=2074631301]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_vb5ih")
 
-[node name="ModeSelect" type="GridContainer" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/DriveControl/VBox/PanelContainer" unique_id=762013310]
+[node name="ModeSelect" type="GridContainer" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/DriveMode/VBox/PanelContainer" unique_id=762013310]
 layout_mode = 2
 columns = 2
 
-[node name="Manual" type="Button" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/DriveControl/VBox/PanelContainer/ModeSelect" unique_id=978071727]
+[node name="Manual" type="Button" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/DriveMode/VBox/PanelContainer/ModeSelect" unique_id=978071727]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.3882353, 0.44705883, 0.53333336, 1)
@@ -274,7 +272,7 @@ theme_override_styles/hover = ExtResource("11_mrbkc")
 theme_override_styles/disabled = ExtResource("9_dpjyv")
 text = "Manual"
 
-[node name="Auto" type="Button" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/DriveControl/VBox/PanelContainer/ModeSelect" unique_id=491784634]
+[node name="Auto" type="Button" parent="MainMargin/RootVBox/ContentSplit/LeftPanel/DriveMode/VBox/PanelContainer/ModeSelect" unique_id=491784634]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.3882353, 0.44705883, 0.53333336, 1)
