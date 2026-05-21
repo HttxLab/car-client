@@ -3,7 +3,7 @@ using CarClient.C_.Components.Discovery;
 
 namespace CarClient.C_.Vehicle;
 
-public class DiscoveredVehicle(string name, bool isReady, IPEndPoint endPoint, uint firmware, float voltage) {
+public class DiscoveredVehicle(string name, bool isReady, IPEndPoint endPoint, uint firmware, float voltage, VehicleMode mode) {
 
     public DisplayedVehicle Display { get; set; }
     
@@ -14,5 +14,6 @@ public class DiscoveredVehicle(string name, bool isReady, IPEndPoint endPoint, u
     
     public uint Firmware { get; } = firmware;
     public float Voltage { get; } = voltage;
-    
+    public VehicleMode Mode { get; } = mode;
+
 }

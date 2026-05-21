@@ -47,7 +47,7 @@ public partial class Discovery : Control
 		
 		// Add test vehicle
 		var address = IPEndPoint.Parse("127.0.0.1:8080");
-		var v1 = new DiscoveredVehicle("Test " + Random.Shared.Next(99), Random.Shared.Next(0, 2) > 0, address, (uint)Random.Shared.Next(24), (float)Random.Shared.NextDouble());
+		var v1 = new DiscoveredVehicle("Test " + Random.Shared.Next(99), Random.Shared.Next(0, 2) > 0, address, (uint)Random.Shared.Next(24), (float)Random.Shared.NextDouble(), VehicleMode.Ai);
 		AddVehicle(v1);
 		
 		// Dispatch discovery to a background thread

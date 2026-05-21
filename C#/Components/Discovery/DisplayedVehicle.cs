@@ -26,6 +26,8 @@ public partial class DisplayedVehicle : PanelContainer {
 
 	private Label _batteryValue;
 	private Label _modeValue;
+	
+	private DiscoveredVehicle _vehicle;
 
 	public override void _Ready() {
 		_icon = GetNode<Label>("Layout/LeftInfo/IconPanel/IconLabel");
@@ -36,9 +38,20 @@ public partial class DisplayedVehicle : PanelContainer {
 
 		_batteryValue = GetNode<Label>("Layout/RightActions/TxtRecords/Battery/Value");
 		_modeValue = GetNode<Label>("Layout/RightActions/TxtRecords/Mode/Value");
+		
+		// Add signal handler
+		GetNode<Button>("Layout/RightActions/Button").Pressed += OnPressed;
+	}
+
+	private void OnPressed() {
+		if (_vehicle != null) {
+			// Connect
+		}
 	}
 
 	public void SetVehicleDetails(DiscoveredVehicle vehicle) {
+		_vehicle = vehicle;
+		
 		_icon.Text = _icons.PickRandom();
 		_name.Text = vehicle.Name;
 
@@ -55,6 +68,6 @@ public partial class DisplayedVehicle : PanelContainer {
 		_address.Text = $"{vehicle.EndPoint.Address}:{vehicle.EndPoint.Port}";
 
 		_batteryValue.Text = $"{vehicle.Voltage} V";
-		_modeValue.Text = $"...";
+		_modeValue.Text = $"{vehicle.Mode}";
 	}
 }
