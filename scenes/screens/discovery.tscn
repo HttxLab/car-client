@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://54dxe8xrafvk" path="res://resources/theme/global.tres" id="1_jm4y5"]
 [ext_resource type="Script" uid="uid://y0vy7n0jqvo7" path="res://C#/Screens/Discovery.cs" id="2_2tr76"]
 [ext_resource type="Texture2D" uid="uid://dvef6hwnogbwc" path="res://textures/icons/search_100dp_22D3EE_FILL0_wght400_GRAD0_opsz48.png" id="2_fftnt"]
+[ext_resource type="PackedScene" uid="uid://b2ji7e2l4pe4w" path="res://scenes/components/discovery/vehicle.tscn" id="3_2tr76"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gwv7l"]
 content_margin_left = 16.0
@@ -78,6 +79,7 @@ grow_vertical = 2
 theme = ExtResource("1_jm4y5")
 script = ExtResource("2_2tr76")
 _serviceType = "_car-telemetry._udp.local."
+_vehicleScene = ExtResource("3_2tr76")
 
 [node name="Timer" type="Timer" parent="." unique_id=1012633655]
 process_callback = 0

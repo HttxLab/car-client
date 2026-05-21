@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b2ji7e2l4pe4w"]
 
-[ext_resource type="Script" uid="uid://c3hbnm4i4g5gr" path="res://C#/Components/Discovery/Service.cs" id="1_1xom6"]
+[ext_resource type="Script" uid="uid://c3hbnm4i4g5gr" path="res://C#/Components/Discovery/DisplayedVehicle.cs" id="2_a5wxx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uhfav"]
 content_margin_left = 20.0
@@ -17,6 +17,38 @@ corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g5cbe"]
+content_margin_left = 6.0
+content_margin_top = 2.0
+content_margin_right = 6.0
+content_margin_bottom = 2.0
+bg_color = Color(0.062745, 0.72549, 0.462745, 0.2)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.062745, 0.72549, 0.462745, 0.3)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16bko"]
+content_margin_left = 6.0
+content_margin_top = 2.0
+content_margin_right = 6.0
+content_margin_bottom = 2.0
+bg_color = Color(1, 0.37867078, 0.28960732, 0.2)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.3876854, 0.16622645, 0.3019608)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hyfs0"]
 bg_color = Color(0.007843, 0.023529, 0.090196, 1)
@@ -89,14 +121,19 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[node name="Service" type="PanelContainer" unique_id=601421218]
+[node name="Vehicle" type="PanelContainer" unique_id=601421218]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_uhfav")
-script = ExtResource("1_1xom6")
+script = ExtResource("2_a5wxx")
+_icons = Array[String](["🚗", "🏎️", "🚓", "🛻", "🚐", "🚜", "🚚", "🚍", "🚎", "🚋", "🚑"])
+_readyColor = Color(0.203922, 0.862745, 0.584314, 1)
+_readyStyle = SubResource("StyleBoxFlat_g5cbe")
+_notReadyColor = Color(1, 0.38039216, 0.2901961, 1)
+_notReadyStyle = SubResource("StyleBoxFlat_16bko")
 
 [node name="Layout" type="HBoxContainer" parent="." unique_id=339206175]
 layout_mode = 2
@@ -116,7 +153,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_hyfs0")
 layout_mode = 2
 theme_override_colors/font_color = Color(0.133333, 0.827451, 0.933333, 1)
 theme_override_font_sizes/font_size = 20
-text = "🚗"
+text = "..."
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -172,18 +209,18 @@ theme_override_font_sizes/font_size = 12
 text = "...."
 horizontal_alignment = 2
 
-[node name="Cameras" type="VBoxContainer" parent="Layout/RightActions/TxtRecords" unique_id=1712181302]
+[node name="Mode" type="VBoxContainer" parent="Layout/RightActions/TxtRecords" unique_id=1712181302]
 layout_mode = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="Layout/RightActions/TxtRecords/Cameras" unique_id=23244382]
+[node name="Label" type="Label" parent="Layout/RightActions/TxtRecords/Mode" unique_id=23244382]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.415686, 0.47451, 0.564706, 1)
 theme_override_font_sizes/font_size = 9
-text = "CAMERAS"
+text = "MODE"
 horizontal_alignment = 2
 
-[node name="Value" type="Label" parent="Layout/RightActions/TxtRecords/Cameras" unique_id=194613661]
+[node name="Value" type="Label" parent="Layout/RightActions/TxtRecords/Mode" unique_id=194613661]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.796078, 0.827451, 0.866667, 1)
 theme_override_font_sizes/font_size = 12
