@@ -34,17 +34,33 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a5wxx"]
+content_margin_left = 20.0
+content_margin_top = 16.0
+content_margin_right = 20.0
+content_margin_bottom = 16.0
+bg_color = Color(0.028737698, 0.054743633, 0.11146829, 0.8)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.196078, 0.254902, 0.333333, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16bko"]
 content_margin_left = 6.0
 content_margin_top = 2.0
 content_margin_right = 6.0
 content_margin_bottom = 2.0
-bg_color = Color(1, 0.37867078, 0.28960732, 0.2)
+bg_color = Color(1, 0.38046145, 0.2650773, 0.2)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(1, 0.3876854, 0.16622645, 0.3019608)
+border_color = Color(1, 0.37975177, 0.27254367, 0.3019608)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
@@ -121,6 +137,22 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48jj5"]
+content_margin_left = 24.0
+content_margin_top = 10.0
+content_margin_right = 24.0
+content_margin_bottom = 10.0
+bg_color = Color(0.13725491, 0.1764706, 0.24313726, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.18648827, 0.23567072, 0.3189082, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
 [node name="Vehicle" type="PanelContainer" unique_id=601421218]
 anchors_preset = 15
 anchor_right = 1.0
@@ -130,10 +162,11 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_uhfav")
 script = ExtResource("2_a5wxx")
 _icons = Array[String](["🚗", "🏎️", "🚓", "🛻", "🚐", "🚜", "🚚", "🚍", "🚎", "🚋", "🚑"])
-_readyColor = Color(0.203922, 0.862745, 0.584314, 1)
-_readyStyle = SubResource("StyleBoxFlat_g5cbe")
-_notReadyColor = Color(1, 0.38039216, 0.2901961, 1)
-_notReadyStyle = SubResource("StyleBoxFlat_16bko")
+_badgeUnlockedColor = Color(0.203922, 0.862745, 0.584314, 1)
+_badgeUnlockedStyle = SubResource("StyleBoxFlat_g5cbe")
+_lockedStyle = SubResource("StyleBoxFlat_a5wxx")
+_badgeLockedColor = Color(1, 0.61937267, 0.56836194, 1)
+_badgeLockedStyle = SubResource("StyleBoxFlat_16bko")
 
 [node name="Layout" type="HBoxContainer" parent="." unique_id=339206175]
 layout_mode = 2
@@ -177,7 +210,7 @@ theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_1xom6")
 text = "READY"
 
-[node name="IPRow" type="Label" parent="Layout/LeftInfo/TextRows" unique_id=639348707]
+[node name="Address" type="Label" parent="Layout/LeftInfo/TextRows" unique_id=639348707]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.592157, 0.654902, 0.72549, 1)
 theme_override_font_sizes/font_size = 12
@@ -203,6 +236,7 @@ text = "BATTERY"
 horizontal_alignment = 2
 
 [node name="Value" type="Label" parent="Layout/RightActions/TxtRecords/Battery" unique_id=1126873278]
+custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.980392, 0.8, 0.0823529, 1)
 theme_override_font_sizes/font_size = 12
@@ -221,6 +255,7 @@ text = "MODE"
 horizontal_alignment = 2
 
 [node name="Value" type="Label" parent="Layout/RightActions/TxtRecords/Mode" unique_id=194613661]
+custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.796078, 0.827451, 0.866667, 1)
 theme_override_font_sizes/font_size = 12
@@ -232,7 +267,7 @@ visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(0.415686, 0.47451, 0.564706, 1)
 theme_override_font_sizes/font_size = 12
-text = "🔒 Connected by ...."
+text = "🔒 Already in use"
 
 [node name="Button" type="Button" parent="Layout/RightActions" unique_id=1040953333]
 layout_mode = 2
@@ -244,4 +279,5 @@ theme_override_font_sizes/font_size = 14
 theme_override_styles/normal = SubResource("StyleBoxFlat_h4r0h")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_3r1cy")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3wnql")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_48jj5")
 text = "CONNECT"

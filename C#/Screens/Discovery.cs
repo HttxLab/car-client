@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
@@ -13,11 +12,14 @@ namespace CarClient.C_.Screens;
 public partial class Discovery : Control
 {
 	
+	[ExportGroup("mDNS")]
 	[Export] private string _serviceType;
+	
+	[ExportGroup("Scenes")]
 	[Export] private PackedScene _vehicleScene;
 
 	private VBoxContainer _vehiclesContainer;
-	private List<DiscoveredVehicle> _vehicles = new ();
+	private List<DiscoveredVehicle> _vehicles = [];
 	
 	public override void _Ready() {
 		_vehiclesContainer = GetNode<VBoxContainer>("CenterContainer/MainColumn/Vehicles");
@@ -47,7 +49,7 @@ public partial class Discovery : Control
 		
 		// Add test vehicle
 		var address = IPEndPoint.Parse("127.0.0.1:8080");
-		var v1 = new DiscoveredVehicle("Test " + Random.Shared.Next(99), Random.Shared.Next(0, 2) > 0, address, (uint)Random.Shared.Next(24), (float)Random.Shared.NextDouble(), VehicleMode.Ai);
+		var v1 = new DiscoveredVehicle(Random.Shared.Next(99).ToString(), Random.Shared.Next(0, 2) > 0, address, (uint)Random.Shared.Next(24), (float)Random.Shared.NextDouble(), Random.Shared.Next(0, 2) > 0 ? Vehicle.Mode.Ai : Vehicle.Mode.Manual);
 		AddVehicle(v1);
 		
 		// Dispatch discovery to a background thread

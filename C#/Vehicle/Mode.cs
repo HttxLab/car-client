@@ -1,6 +1,6 @@
 ﻿namespace CarClient.C_.Vehicle;
 
-public enum VehicleMode {
+public enum Mode {
     
     Manual,
     Ai
