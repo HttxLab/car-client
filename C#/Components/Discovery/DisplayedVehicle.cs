@@ -61,6 +61,7 @@ public partial class DisplayedVehicle : PanelContainer {
 	private void OnPressed() {
 		if (_vehicle != null) {
 			// Connect
+			Controller.Instance.SwitchScreen(Controller.Screens.TlsPrompt);
 		}
 	}
 

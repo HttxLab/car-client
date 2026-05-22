@@ -1,0 +1,153 @@
+[gd_scene format=3 uid="uid://cw83wx31gvig0"]
+
+[ext_resource type="Theme" uid="uid://54dxe8xrafvk" path="res://resources/theme/global.tres" id="1_theme"]
+[ext_resource type="FontFile" uid="uid://rialxmc05q5i" path="res://fonts/firacode-semibold.ttf" id="2_semibold"]
+[ext_resource type="FontFile" uid="uid://fnctki4ea0oh" path="res://fonts/firacode-regular.ttf" id="3_regular"]
+[ext_resource type="StyleBox" uid="uid://c3u7ityhvvopl" path="res://resources/theme/bars/background.tres" id="4_bgwell"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+content_margin_left = 24.0
+content_margin_top = 24.0
+content_margin_right = 24.0
+content_margin_bottom = 24.0
+bg_color = Color(0.058824, 0.090196, 0.164706, 0.95)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.196078, 0.254902, 0.333333, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="TlsPrompt" type="Control" unique_id=1470036051]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="." unique_id=969770123]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1908384603]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dialog" type="PanelContainer" parent="CenterContainer" unique_id=856213714]
+layout_mode = 2
+theme = ExtResource("1_theme")
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="Layout" type="VBoxContainer" parent="CenterContainer/Dialog" unique_id=1505331043]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Header" type="HBoxContainer" parent="CenterContainer/Dialog/Layout" unique_id=374657343]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="CenterContainer/Dialog/Layout/Header" unique_id=1965510183]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.133333, 0.827451, 0.933333, 1)
+theme_override_fonts/font = ExtResource("2_semibold")
+theme_override_font_sizes/font_size = 16
+text = "UNKNOWN CERTIFICATE"
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/Dialog/Layout" unique_id=1362780558]
+layout_mode = 2
+
+[node name="Message" type="Label" parent="CenterContainer/Dialog/Layout" unique_id=6518748]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.796078, 0.827451, 0.866667, 1)
+theme_override_fonts/font = ExtResource("3_regular")
+text = "The server's identity cannot be verified.
+Do you want to trust this certificate?"
+
+[node name="CertBox" type="PanelContainer" parent="CenterContainer/Dialog/Layout" unique_id=1514123788]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_bgwell")
+
+[node name="CertMargin" type="MarginContainer" parent="CenterContainer/Dialog/Layout/CertBox" unique_id=1756248644]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Grid" type="GridContainer" parent="CenterContainer/Dialog/Layout/CertBox/CertMargin" unique_id=195955513]
+layout_mode = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 12
+columns = 2
+
+[node name="Host" type="Label" parent="CenterContainer/Dialog/Layout/CertBox/CertMargin/Grid" unique_id=1765546319]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.415686, 0.47451, 0.564706, 1)
+theme_override_fonts/font = ExtResource("3_regular")
+text = "Host:"
+horizontal_alignment = 2
+
+[node name="HostValue" type="Label" parent="CenterContainer/Dialog/Layout/CertBox/CertMargin/Grid" unique_id=1055086672]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.796078, 0.827451, 0.866667, 1)
+theme_override_fonts/font = ExtResource("3_regular")
+text = "..."
+
+[node name="Issuer" type="Label" parent="CenterContainer/Dialog/Layout/CertBox/CertMargin/Grid" unique_id=2015549694]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.415686, 0.47451, 0.564706, 1)
+theme_override_fonts/font = ExtResource("3_regular")
+text = "Issuer:"
+horizontal_alignment = 2
+
+[node name="IssuerValue" type="Label" parent="CenterContainer/Dialog/Layout/CertBox/CertMargin/Grid" unique_id=1949486553]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.796078, 0.827451, 0.866667, 1)
+theme_override_fonts/font = ExtResource("3_regular")
+text = "..."
+
+[node name="Fingerprint" type="Label" parent="CenterContainer/Dialog/Layout/CertBox/CertMargin/Grid" unique_id=712911831]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.415686, 0.47451, 0.564706, 1)
+theme_override_fonts/font = ExtResource("3_regular")
+text = "SHA-256:"
+horizontal_alignment = 2
+
+[node name="FingerprintValue" type="Label" parent="CenterContainer/Dialog/Layout/CertBox/CertMargin/Grid" unique_id=418647251]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.796078, 0.827451, 0.866667, 1)
+theme_override_fonts/font = ExtResource("3_regular")
+text = "..."
+
+[node name="HSeparator2" type="HSeparator" parent="CenterContainer/Dialog/Layout" unique_id=1608222485]
+layout_mode = 2
+
+[node name="Actions" type="HBoxContainer" parent="CenterContainer/Dialog/Layout" unique_id=1966277346]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 2
+
+[node name="Reject" type="Button" parent="CenterContainer/Dialog/Layout/Actions" unique_id=1510279837]
+layout_mode = 2
+text = "Cancel"
+
+[node name="Once" type="Button" parent="CenterContainer/Dialog/Layout/Actions" unique_id=458294529]
+layout_mode = 2
+text = "Connect Once"
+
+[node name="Trust" type="Button" parent="CenterContainer/Dialog/Layout/Actions" unique_id=1897859238]
+layout_mode = 2
+text = "Trust & Connect"

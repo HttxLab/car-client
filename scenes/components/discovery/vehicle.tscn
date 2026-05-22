@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://b2ji7e2l4pe4w"]
 
+[ext_resource type="StyleBox" uid="uid://bsi1loqhvakvk" path="res://resources/theme/badge/success.tres" id="2_16bko"]
 [ext_resource type="Script" uid="uid://c3hbnm4i4g5gr" path="res://C#/Components/Discovery/DisplayedVehicle.cs" id="2_a5wxx"]
+[ext_resource type="StyleBox" uid="uid://bska2paoylic" path="res://resources/theme/badge/error.tres" id="3_a5wxx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uhfav"]
 content_margin_left = 20.0
@@ -18,28 +20,12 @@ corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g5cbe"]
-content_margin_left = 6.0
-content_margin_top = 2.0
-content_margin_right = 6.0
-content_margin_bottom = 2.0
-bg_color = Color(0.062745, 0.72549, 0.462745, 0.2)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.062745, 0.72549, 0.462745, 0.3)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a5wxx"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16bko"]
 content_margin_left = 20.0
 content_margin_top = 16.0
 content_margin_right = 20.0
 content_margin_bottom = 16.0
-bg_color = Color(0.028737698, 0.054743633, 0.11146829, 0.8)
+bg_color = Color(0.026090316, 0.048761293, 0.10635816, 0.8)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
@@ -49,22 +35,6 @@ corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16bko"]
-content_margin_left = 6.0
-content_margin_top = 2.0
-content_margin_right = 6.0
-content_margin_bottom = 2.0
-bg_color = Color(1, 0.38046145, 0.2650773, 0.2)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(1, 0.37975177, 0.27254367, 0.3019608)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hyfs0"]
 bg_color = Color(0.007843, 0.023529, 0.090196, 1)
@@ -77,22 +47,6 @@ corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1xom6"]
-content_margin_left = 6.0
-content_margin_top = 2.0
-content_margin_right = 6.0
-content_margin_bottom = 2.0
-bg_color = Color(0.062745, 0.72549, 0.462745, 0.2)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.062745, 0.72549, 0.462745, 0.3)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h4r0h"]
 content_margin_left = 24.0
@@ -163,10 +117,10 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_uhfav")
 script = ExtResource("2_a5wxx")
 _icons = Array[String](["🚗", "🏎️", "🚓", "🛻", "🚐", "🚜", "🚚", "🚍", "🚎", "🚋", "🚑"])
 _badgeUnlockedColor = Color(0.203922, 0.862745, 0.584314, 1)
-_badgeUnlockedStyle = SubResource("StyleBoxFlat_g5cbe")
-_lockedStyle = SubResource("StyleBoxFlat_a5wxx")
-_badgeLockedColor = Color(1, 0.61937267, 0.56836194, 1)
-_badgeLockedStyle = SubResource("StyleBoxFlat_16bko")
+_badgeUnlockedStyle = ExtResource("2_16bko")
+_lockedStyle = SubResource("StyleBoxFlat_16bko")
+_badgeLockedColor = Color(1, 0.61739, 0.5834445, 1)
+_badgeLockedStyle = ExtResource("3_a5wxx")
 
 [node name="Layout" type="HBoxContainer" parent="." unique_id=339206175]
 layout_mode = 2
@@ -207,7 +161,7 @@ text = "...."
 layout_mode = 2
 theme_override_colors/font_color = Color(0.203922, 0.862745, 0.584314, 1)
 theme_override_font_sizes/font_size = 10
-theme_override_styles/normal = SubResource("StyleBoxFlat_1xom6")
+theme_override_styles/normal = ExtResource("2_16bko")
 text = "READY"
 
 [node name="Address" type="Label" parent="Layout/LeftInfo/TextRows" unique_id=639348707]
