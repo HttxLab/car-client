@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
 using CarClient.C_.Components.Discovery;
-using CarClient.C_.Vehicle;
+using CarClient.C_.Vehicle.Discovery;
 using Godot;
 using Zeroconf;
 
@@ -19,16 +19,26 @@ public partial class Discovery : Control
 	[Export] private PackedScene _vehicleScene;
 
 	private VBoxContainer _vehiclesContainer;
+	private LineEdit _ipAddress;
+	
 	private List<DiscoveredVehicle> _vehicles = [];
 	
 	public override void _Ready() {
 		_vehiclesContainer = GetNode<VBoxContainer>("CenterContainer/MainColumn/Vehicles");
+		_ipAddress = GetNode<LineEdit>("CenterContainer/MainColumn/DirectConnect/HBox/Address");
 		
 		// Add signal handlers
 		GetNode<Timer>("Timer").Timeout += OnTimerTimeout;
+		GetNode<Button>("CenterContainer/MainColumn/DirectConnect/HBox/DirectConnect").Pressed += OnDirectConnect;
 		
 		// Start the discovery immediately
 		OnTimerTimeout();
+	}
+
+	private void OnDirectConnect() {
+		var address = IPEndPoint.Parse(_ipAddress.Text);
+		var vehicle = new DirectConnectVehicle(address);
+		Controller.Instance.ConnectToVehicle(vehicle);
 	}
 
 	private void AddVehicle(DiscoveredVehicle vehicle) {

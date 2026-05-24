@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using CarClient.C_.Vehicle;
+using CarClient.C_.Vehicle.Discovery;
 using Godot;
 using Godot.Collections;
 
@@ -61,7 +62,7 @@ public partial class DisplayedVehicle : PanelContainer {
 	private void OnPressed() {
 		if (_vehicle != null) {
 			// Connect
-			Controller.Instance.SwitchScreen(Controller.Screens.TlsPrompt);
+			Controller.Instance.ConnectToVehicle(_vehicle);
 		}
 	}
 

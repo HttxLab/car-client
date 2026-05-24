@@ -1,3 +1,4 @@
+using CarClient.C_.Vehicle.Discovery;
 using Godot;
 
 namespace CarClient.C_;
@@ -12,12 +13,6 @@ public partial class Controller : Node {
 	
 	private Node _currentScreen;
 	
-	public enum Screens {
-		Discovery,
-		Dashboard,
-		TlsPrompt
-	}
-	
 	public override void _Ready() {
 		Instance = this;
 		
@@ -25,6 +20,11 @@ public partial class Controller : Node {
 		SwitchScreen(Screens.Discovery);
 	}
 
+	public void ConnectToVehicle(ConnectableVehicle vehicle) {
+		GD.Print($"Connecting to vehicle: {vehicle.EndPoint}");
+		SwitchScreen(Screens.TlsPrompt);
+	}
+	
 	public void SwitchScreen(Screens screen) {
 		GD.Print($"Switching to screen: {screen}");
 		_currentScreen?.QueueFree();
@@ -36,6 +36,12 @@ public partial class Controller : Node {
 			_ => _currentScreen
 		};
 		AddChild(_currentScreen);
+	}
+
+	public enum Screens {
+		Discovery,
+		Dashboard,
+		TlsPrompt
 	}
 	
 }
